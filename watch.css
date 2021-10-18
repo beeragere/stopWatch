@@ -1,0 +1,133 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.watchHolder {
+  background-color: black;
+  height: 20rem;
+  width: 20rem;
+}
+
+.watchHolder .outerEar .watch {
+  position: relative;
+  font-size: 2rem;
+  line-height: 10rem;
+  text-align: center;
+  height: 10rem;
+  width: 10rem;
+  margin: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid #541388;
+  border-radius: 50%;
+  background-color: #D90368;
+  -webkit-box-shadow: 0 0 0 5px #D90368 inset, 0 0 0 8px #541388 inset;
+          box-shadow: 0 0 0 5px #D90368 inset, 0 0 0 8px #541388 inset;
+  z-index: 10;
+}
+
+.watchHolder .buttonHolder {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.watchHolder .buttonHolder .buttons {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 2.4em;
+  width: 4em;
+  margin: 0.5rem;
+  line-height: 2.4em;
+  text-align: center;
+  background-color: #541388;
+  cursor: pointer;
+  border-radius: 50% 1%/60% 40%;
+  -webkit-transition: background-color 0ms, -webkit-box-shadow 10ms;
+  transition: background-color 0ms, -webkit-box-shadow 10ms;
+  transition: background-color 0ms, box-shadow 10ms;
+  transition: background-color 0ms, box-shadow 10ms, -webkit-box-shadow 10ms;
+}
+
+.watchHolder .buttonHolder .buttons:hover {
+  background-color: #D90368;
+  -webkit-box-shadow: 0 0 0 2px black, 0 0 0 6px #D90368;
+          box-shadow: 0 0 0 2px black, 0 0 0 6px #D90368;
+}
+
+.watchHolder .buttonHolder .buttons:active {
+  background-color: #541388;
+}
+
+.watchHolder .errorMessage {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2rem;
+  width: 15rem;
+  line-height: 2rem;
+  text-align: center;
+  background-color: #541388;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 0 2px black, 0 0 0 4px #D90368;
+          box-shadow: 0 0 0 2px black, 0 0 0 4px #D90368;
+  visibility: hidden;
+}
+
+@-webkit-keyframes fade {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes fade {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+
+.fadeAnimation {
+  -webkit-animation: fade forwards 1500ms ease;
+          animation: fade forwards 1500ms ease;
+}
+/*# sourceMappingURL=watch.css.map */

@@ -1,0 +1,144 @@
+$mainColor: #541388;
+$subColor: #D90368;
+
+//  $mainColor: #f72585;
+//  $subColor: #b5179e;
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    color: white;
+
+    display: grid;
+    place-items: center;
+
+    user-select: none;
+}
+
+.watchHolder{
+    background-color: black;
+    height: 20rem;
+    width: 20rem;
+
+    .outerEar{
+        // position: relative;
+        // background-color: black;
+        // &::after, &::before{
+        //     content: "";
+        //     position: absolute;
+        //     width: 5rem;
+        //     height: 5rem;
+        //     background-color: $subColor;
+        //     border-radius: 50%;
+
+        // }
+        // &::after{
+        //     right: 20%;
+        //     top: -20%;
+        // }
+        // &::before{
+        //     left: 20%;
+        //     top: -20%;
+        // }
+        .watch{
+            position: relative;
+            // &::after{
+            //     content: "";
+            //     position: absolute;
+            //     left: 0;
+            //     bottom: -1rem;
+            //     width: 10rem;
+            //     height: 4rem;
+            //     background-color: $subColor;
+            //     border-radius: 50%; 
+            //     border-bottom-left-radius: 0;
+            //     border-bottom-right-radius: 0;
+
+            //     z-index: 0;
+            // } 
+            font-size: 2rem;
+            line-height: 10rem;
+            text-align: center;
+            height: 10rem;
+            width: 10rem;
+            margin: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+            border: 5px solid $mainColor;
+            border-radius: 50%;
+            background-color: $subColor;
+
+            box-shadow: 0 0 0 5px $subColor inset, 0 0 0 8px $mainColor inset;
+            z-index: 10;
+        }
+
+    }
+    .buttonHolder{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .buttons{
+            &:hover{
+                background-color: $subColor;
+                box-shadow: 0 0 0 2px black, 0 0 0 6px $subColor;
+            }
+            &:active{
+                background-color: $mainColor;
+            }
+            box-sizing: content-box;
+            height: 2.4em;
+            width: 4em;
+            margin: 0.5rem;
+            line-height: 2.4em;
+            text-align: center;
+            background-color: $mainColor;
+            cursor: pointer;
+
+            border-radius: 50% 1%/60% 40%;
+            transition: background-color 0ms, box-shadow 10ms;
+        }
+    } 
+
+    .errorMessage{
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        height: 2rem;
+        width: 15rem;
+        line-height: 2rem;
+        text-align: center;
+        background-color: $mainColor;
+
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 0 2px black, 0 0 0 4px $subColor;
+        visibility: hidden;
+    } 
+}
+
+@keyframes fade{
+   from{
+       visibility: visible;
+   } 
+   to{
+       visibility: hidden;
+   }
+}
+
+.fadeAnimation{
+    animation: fade forwards 1500ms ease;
+}
