@@ -4,6 +4,7 @@ let stop = document.querySelector(".stop");
 let reset = document.querySelector(".reset");
 let errorMessage = document.querySelector(".errorMessage");
 
+
 display.innerHTML = "hello";
 
 function StopWatch(){
